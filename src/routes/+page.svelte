@@ -1,10 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-    let baseUrl = localStorage.getItem('baseUrl') ? localStorage.getItem('baseUrl') as string : "";
-    let ext = localStorage.getItem('ext') ? localStorage.getItem('ext') as string : "";
-    let page = localStorage.getItem('page') ? parseInt(localStorage.getItem('page') as string) : 1;;
+    let baseUrl = "";
+    let ext = ".jpg";
+    let page = 1;
 
     onMount(async () => {
+        baseUrl = localStorage.getItem('baseUrl') ? localStorage.getItem('baseUrl') as string : baseUrl;
+        ext = localStorage.getItem('ext') ? localStorage.getItem('ext') as string : ext;
+        page = localStorage.getItem('page') ? parseInt(localStorage.getItem('page') as string) : page;
         (<HTMLInputElement>document.getElementById('baseUrl')).value = baseUrl;
         (<HTMLInputElement>document.getElementById('ext')).value = ext;
         (<HTMLInputElement>document.getElementById('page')).value = page.toString();
