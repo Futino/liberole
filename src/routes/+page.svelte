@@ -71,12 +71,12 @@
 
 				<ul class="flex h-full shadow-lg shadow-black">
 					<button on:click={previousPage} class="h-full w-full">
-						<img src="{baseUrl}{page}{ext}" alt="Left Page" class="h-full w-full select-none" />
+						<img src="{baseUrl}{page - 1}{ext}" alt="Left Page" class="h-full w-full select-none" />
 					</button>
 
 					<button on:click={nextPage} class="h-full w-full">
 						<img
-							src="{baseUrl}{page + 1}{ext}"
+							src="{baseUrl}{page + 0}{ext}"
 							alt="Right Page"
 							class="h-full w-full select-none"
 						/>
