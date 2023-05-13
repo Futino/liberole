@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap"
+			rel="stylesheet"
+		/>
+
+		<script>
+			// On page load or when changing themes, best to add inline in `head` to avoid FOUC
+			if (
+				localStorage.theme === 'dark' ||
+				(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+			) {
+				document.documentElement.classList.add('dark');
+			} else {
+				document.documentElement.classList.remove('dark');
+			}
+			// Whenever the user explicitly chooses light mode
+			// localStorage.theme = 'light'
+
+			// Whenever the user explicitly chooses dark mode
+			// localStorage.theme = 'dark'
+
+			// Whenever the user explicitly chooses to respect the OS preference
+			// localStorage.removeItem('theme')
+		</script>
+
+		<meta http-equiv="content-security-policy" content="">
+		<link href="./_app/immutable/assets/0.a4c4cf0c.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.d2103bc3.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.04070b6f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.2fa21f71.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.168a7687.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.100bbb7f.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.5d4807a3.js">
+	</head>
+	<body
+		data-sveltekit-preload-data="hover"
+		class="bg-background-light dark:bg-background-dark ext-center text-background-on-light dark:text-background-on-dark"
+	>
+		<div
+			class="min-h-screen bg-gradient-to-r from-background-light to-secondary-light/5 dark:from-background-dark dark:to-secondary-dark/5"
+		>
+			
+
+
+<main class="p-4 border-b shadow-2xl sm:px-6 md:px-8 border-primary-light/40 dark:border-primary-dark/40"><div class="grid justify-items-center space-y-12 mx-auto"><form class="grid justify-items-center space-y-5 w-full px-80"><h1 class="display-large">External Reader</h1>
+			<h2 class="label-large">by Jonas Lindberg</h2>
+			<input id="baseUrl" type="text" placeholder="https://example.com/files/" class="bg-black/50 p-2 w-full">
+			<input id="ext" type="text" placeholder=".jpg" class="bg-black/50 p-2 w-full">
+			<input id="page" type="number" placeholder="0" class="bg-black/50 p-2 w-full">
+			<button class="p-2 bg-black/20 shadow-md shadow-black">Load </button></form>
+
+		</div></main>
+
+
+			
+			<script>
+				{
+					__sveltekit_sangdw = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.d2103bc3.js"),
+						import("./_app/immutable/entry/app.168a7687.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		
+		</div>
+	</body>
+</html>
